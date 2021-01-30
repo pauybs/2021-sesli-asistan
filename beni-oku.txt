@@ -1,0 +1,3 @@
+---------- Python kodlarını kullanarak ses ile oda lambası kontrolü ve kapı kilidi kontrolü--------------
+Kodlarımızın düzgün çalışabilmesi için gerekli olan drive linki : https://chromedriver.chromium.org/downloads
+Ayrıca kodlarınızın bulunduğu klasöre selenium 'un yüklenmesi gerekmektedir.

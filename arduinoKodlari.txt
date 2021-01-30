@@ -1,0 +1,35 @@
+//bu kodlar hem kapı kilidi kontrolünde kullanılacak olan arduino hem de lamba kontrolü için kullanılacak
+//arduino için aynıdır. iki arduino içine de bu kodlar yüklenir
+
+#define bluetooth Serial
+int lamba=4;
+
+
+
+void setup() {
+  bluetooth.begin(9600);
+  pinMode(lamba, OUTPUT);
+  digitalWrite(lamba,1);
+}
+
+void loop() {
+  if (bluetooth.available()) {
+    char c = (char)bluetooth.read();
+    if (c == 'f'){
+      dhDurum(10);
+    }
+    else if (c == 'g'){
+      dhDurum(11);
+    }
+  }
+}
+
+void dhDurum(int o){
+  if (o==10){
+    digitalWrite(lamba,0);
+    }
+  else if (o==11){
+    digitalWrite(lamba,1);
+    }
+   delay(10);
+}
